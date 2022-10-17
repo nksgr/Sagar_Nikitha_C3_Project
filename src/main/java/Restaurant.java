@@ -45,6 +45,8 @@ public class Restaurant {
         Item newItem = new Item(name,price);
         menu.add(newItem);
     }
+
+
     
     public void removeFromMenu(String itemName) throws itemNotFoundException {
 
@@ -66,5 +68,6 @@ public class Restaurant {
     public String getName() {
         return name;
     }
+
 
 }

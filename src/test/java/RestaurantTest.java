@@ -18,6 +18,9 @@ class RestaurantTest {
         restaurant = new Restaurant("Amelie's cafe","Chennai",openingTime,closingTime);
         restaurant.addToMenu("Sweet corn soup",119);
         restaurant.addToMenu("Vegetable lasagne", 269);
+        restaurant.addToMenu("White Sauce Pasta",249);
+        restaurant.addToMenu("Chicken BBQ Pizza", 375);
+        restaurant.addToMenu("Choco Lava Cake", 120);
     }
 
 
@@ -76,4 +79,21 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+    // <<<<<<<<<<<<<<<<<<<<<<< Order Value Calculator Tests >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    @Test
+    public void passing_a_list_of_string_type_as_parameter_expecting_sum_of_all_the_prices_of_items_int_type(){
+
+        String selectedItems1[] = new String[] {"Sweet corn soup", "Chicken BBQ Pizza", "Vegetable lasagne" };
+        String selectedItems2[] = new String[] {"White Sauce Pasta", "Chicken BBQ Pizza", "Choco Lava Cake" };
+
+
+        assertEquals(763,restaurant.calculateOrderValue(selectedItems1)); //test failed
+        assertEquals(744,restaurant.calculateOrderValue(selectedItems2)); //test failed
+
+    }
+
+
+
 }
