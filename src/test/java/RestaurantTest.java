@@ -89,8 +89,8 @@ class RestaurantTest {
         String selectedItems2[] = new String[] {"White Sauce Pasta", "Chicken BBQ Pizza", "Choco Lava Cake" };
 
 
-        assertEquals(763,restaurant.calculateOrderValue(selectedItems1)); //test failed
-        assertEquals(744,restaurant.calculateOrderValue(selectedItems2)); //test failed
+        assertEquals(763,restaurant.calculateOrderValue(selectedItems1)); 
+        assertEquals(744,restaurant.calculateOrderValue(selectedItems2));
 
     }
 

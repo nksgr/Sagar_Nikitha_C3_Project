@@ -46,8 +46,6 @@ public class Restaurant {
         menu.add(newItem);
     }
 
-
-    
     public void removeFromMenu(String itemName) throws itemNotFoundException {
 
         Item itemToBeRemoved = findItemByName(itemName);
@@ -56,6 +54,7 @@ public class Restaurant {
 
         menu.remove(itemToBeRemoved);
     }
+
     public void displayDetails(){
         System.out.println("Restaurant:"+ name + "\n"
                 +"Location:"+ location + "\n"
@@ -64,6 +63,15 @@ public class Restaurant {
                 +"Menu:"+"\n"+getMenu());
 
     }
+    // new feature
+    public int calculateOrderValue(String[] selectedItems){
+        int orderValue = 0;
+        for (String item: selectedItems){
+            orderValue += findItemByName(item).getPrice();
+        }
+        return orderValue;
+    }
+
 
     public String getName() {
         return name;
